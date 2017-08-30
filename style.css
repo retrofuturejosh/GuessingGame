@@ -12,10 +12,29 @@ input {
     padding: 7px 14px 7px 14px;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 155%;
+    font-size: 55px;
     text-align: center;
     border: solid 1px black;
-    margin: auto;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+}
+*::-webkit-input-placeholder {
+    color: white;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: white;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: white;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white;
 }
 #app {
     background-color: white;
@@ -87,4 +106,7 @@ li {
     border: 1px solid black ;
     padding: 0 25px;
     border-radius: 10%;
+}
+#submit {
+    border-radius:100%;
 }
