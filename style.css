@@ -1,0 +1,90 @@
+
+body{
+  text-align: center;
+  font-family: sans-serif;
+  width: 100%;
+  background-image: url("background.jpg");
+  background-blend-mode: lighten;
+  height: 100%;
+  background-size: 50%;
+}
+input {
+    padding: 7px 14px 7px 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 155%;
+    text-align: center;
+    border: solid 1px black;
+    margin: auto;
+}
+#app {
+    background-color: white;
+    width: 45%;
+    margin: auto;
+    border-radius: 25px;
+    padding: 10px 10px 30px 10px;
+    opacity: 0.97;
+    border: solid black 5px;
+
+}
+#main {
+    width: 100%;
+    margin: auto;
+}
+button {
+    padding: 7px 14px 7px 14px;
+    border: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 155%;
+    text-align: center;
+    background-color: ##222222;
+    margin: auto;
+    opacity: 1.0;
+    border: solid 1px black;
+}
+button:hover {
+    background-color: red;
+    color: white;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+h1 {
+    padding: 0;
+    font-size: 48px;
+    font-stretch: extra-expanded;
+    margin: 0 0 10px 0;
+}
+h3 {
+    margin: 0 0 10px 0;
+}
+img {
+    display: inline;
+    width: 300px;
+    height: 80px;
+    padding: 0 20px 0 20px;
+}
+#headers {
+    width: 100%;
+    margin: auto;
+    border-radius: 25px;
+}
+
+#footer {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+}
+li {
+    display: inline;
+    font-size: 60px;
+    border: 1px solid black ;
+    padding: 0 25px;
+    border-radius: 10%;
+}
