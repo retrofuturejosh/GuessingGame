@@ -70,6 +70,7 @@ Game.prototype.playersGuessSubmission = function(num){
   Game.prototype.provideHint = function(){
     let hintArr = [this.winningNumber, generateWinningNumber(), generateWinningNumber()];
     if (Game.hintUsed === true){
+      $('#hint').prop("disabled",true);
       return 'Sorry, you already used your hint!'
     } else Game.hintUsed = true;
     hintArr = shuffle(hintArr);
@@ -88,9 +89,15 @@ $(document).ready(function() {
   console.log(game);
 
   $('#submit').click(function(e) {
+    $('#player-input').focus();
     makeAGuess(game);
-
   })
+
+  $('#player-input').keypress(function(event) {
+    if ( event.which == 13 ) {
+       makeAGuess(game);
+    }
+})
 
   $('#reset').click(function(event){
     game = newGame();
@@ -98,11 +105,13 @@ $(document).ready(function() {
     $('h3').text('Guess a number between 1-100!')
     $('li').text('---');
     $('#hint, #submit').prop("disabled",false);
+    $('#player-input').focus();
     Game.hintUsed = false;
   })
 
   $('#hint').click(function(event){
     var hints = game.provideHint();
     $('h3').text(hints);
+    $('#player-input').focus();
   })
 });
