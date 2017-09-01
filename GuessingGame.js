@@ -31,7 +31,23 @@ Game.prototype.isLower = function(){
 };
 
 Game.prototype.playersGuessSubmission = function(num){
-    if (num < 1 || num > 100 || isNaN(num)) throw 'That is an invalid guess.';
+    if (num < 1 || num > 100 || isNaN(num)){
+      if (Game.stupidGuesses === 2){
+        $('h3').text("If you make me tell you again, you'll lose!");
+        Game.stupidGuesses = 3;
+      } else if (Game.stupidGuesses === 3){
+        $('#hint, #submit').prop("disabled",true);
+        $('h1').text("You lose!");
+        $('h3').text("I warned you, wise guy!");
+      } else if (Game.stupidGuesses === 1){
+        $('h3').text('I already told you! 1-100, dummy!');
+        Game.stupidGuesses = 2;
+      } else {
+        Game.stupidGuesses = 1;
+        $('h3').text('You can only guess a number between 1-100.');
+      }
+      throw 'That is an invalid guess.'
+    } 
     this.playersGuess = num;
     return this.checkGuess();
   };
