@@ -101,12 +101,17 @@ img {
     opacity: 0.9;
 }
 li {
-    display: inline;
-    font-size: 60px;
+    font-size: 30px;
+    text-align: center;
     border: 1px solid black ;
-    padding: 0 25px;
     border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    display: inline;
+    margin: auto;
+    padding: 5px;
 }
-#submit {
-    border-radius:100%;
+
+.inline {
+    display: inline;
 }

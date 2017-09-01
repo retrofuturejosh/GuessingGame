@@ -6,7 +6,7 @@
     <link rel='stylesheet' type='text/css' href='style.css'>
     
 
-
+  <script src="jquery-3.2.1.min.js"></script>
   </head>
   <body>
 
@@ -19,23 +19,23 @@
 
         <div id='main'>
           <div id='input-parent'>
-            <input placeholder="#" maxlength='3' autofocus=autofocus></input>
+            <input id='player-input' placeholder="#" maxlength='3' autofocus=autofocus></input>
               <button id="submit">Go!</button>
           </div>
 
           <div id='guesses'>
             <ul>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
+              <li>---</li>
+              <li>---</li>
+              <li>---</li>
+              <li>---</li>
+              <li>---</li>
             </ul>
           </div>
 
           <div id="menu-btns">
-           <button>Reset</button>
-           <button>Hint</button>
+           <button id='reset'>Reset</button>
+           <button id='hint'>Hint</button>
           </div>
         </div>
       </div>
@@ -53,6 +53,6 @@
 
         </div>
     </div>
-
+  <script src='guessinggame.js'></script>
   </body>
 </html>
